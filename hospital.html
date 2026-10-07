@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Website </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> <strong>med</strong>care </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#services">services</a>
+            <a href="#doctors">doctors</a>
+            <a href="#appointment">appointment</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+
+    <section class="home" id="home">
+
+        <div class="image">
+            <img src="https://drive.google.com/uc?id=1gFIBhHZlMBqLw-dO5HJcXPnPOoUBqQ7W" alt="">
+        </div>
+
+        <div class="content">
+            <h3>we take care of your healthy life</h3>
+            <p> A person who has good physical health is likely to have bodily functions and processes working at their
+                peak.</p>
+            <a href="#appointment" class="btn"> appointment us <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </section>
+
+
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+
+        <div class="stats-container">
+
+            <button class="stat-card" onclick="showStatData('doctors')">
+                <div class="stat-icon">👨‍⚕️</div>
+                <div class="stat-number">100+</div>
+                <div class="stat-title">Doctors At Work</div>
+            </button>
+
+            <button class="stat-card" onclick="showStatData('patients')">
+                <div class="stat-icon">👥</div>
+                <div class="stat-number">1030+</div>
+                <div class="stat-title">Satisfied Patients</div>
+            </button>
+
+            <button class="stat-card" onclick="showStatData('beds')">
+                <div class="stat-icon">🛏️</div>
+                <div class="stat-number">490+</div>
+                <div class="stat-title">Bed Facility</div>
+            </button>
+
+            <button class="stat-card" onclick="showStatData('hospitals')">
+                <div class="stat-icon">🏥</div>
+                <div class="stat-number">70+</div>
+                <div class="stat-title">Available Hospitals</div>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Stat Popup Modal -->
+    <div id="statModal" class="stat-modal">
+        <div class="stat-modal-content">
+            <button class="close-modal" onclick="closeStatData()">&#x2715;</button>
+            <h2 id="modalTitle"></h2>
+            <div id="modalData"></div>
+        </div>
+    </div>
+
+    <!--about us-->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="https://img.freepik.com/free-photo/doctors-nurses-medical-team-standing-hospital-corridor_74855-2234.jpg"
+                    alt="about medcare">
+            </div>
+
+            <div class="content">
+                <h3>Health Is Wealth </h3>
+                <p>If your health deteriorates, it can overshadow everything going on in your life. From relatively
+                    minor health issues like aches and pains, to major health issues like lethargy and indigestion that
+                    can threaten your existence, health can really affect happiness and stress levels.
+
+                    So we have brought medcare for you which will cure your minor ailments instantly</p>
+                <a href="https://www.healthylifestylesliving.com/health/healthy-lifestyle/what-is-a-healthy-lifestyle/#:~:text=The%20actual%20definition%20of%20Healthy%20Living%20is%20the,the%20future.%20So%20healthy%20living%20would%20consist%20of%3A"
+                    class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--our services-->
+
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3>free checkups</h3>
+                <p>A free medical check-up is a periodical or routine set of medical tests that you can take in
+                    designated health centres or hospitals based on your health insurance plan. It will help you analyse
+                    your current health conditions and motivates you to stay healthy in the longer term.</p>
+                <a href="https://meddco.com/free-health-checkup-camp" class="btn"> learn more <span
+                        class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3>24/7 ambulance</h3>
+                <p>Ambulances are not merely means of transporting an ill person to the hospital. They are mobile
+                    hospitals equipped with basic facilities required during a medical emergency. Most hospitals offer
+                    ambulance facility on a 24/7 basis. This service is very helpful for bed ridden patients or those
+                    who face a medical emergency unexpectedly.</p>
+                <a href="https://www.meddcoambulance.com/" class="btn"> learn more <span
+                        class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>expert doctors</h3>
+                <p>All Expert Witness Doctors medical expert witnesses are respected, board-certified physicians with
+                    extensive private practice experience diagnosing and treating conditions within their respective
+                    medical specialty.</p>
+                <a href="#doctors" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-pills"></i>
+                <h3>medicines</h3>
+                <p>fully tested and fresh medicines are sold in this platform so it is very important for this managment
+                    of hospital as well as any of the diseases medicines is available on this platform and its very
+                    helpful for the clients alss it is very less expensive .</p>
+                <a href="https://pharmeasy.in/" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-procedures"></i>
+                <h3>bed facility</h3>
+                <p>bad facilities is very clean in this hospital as well as there is very advance level of beds. in this
+                    hospital also takes while chair facilities and much many more facilities are there so its very
+                    wonderful .</p>
+                <a href="https://www.globalspec.com/learnmore/specialized_industrial_products/medical_equipment_supplies/hospital_beds#:~:text=Hospital%20beds%20are%20commonly%20made%20of%20a%20combination,long%20term%20care%20beds%20and%20psychiatric%20care%20beds."
+                    class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Blood Donation And Availability </h3>
+                <p>Blood donation saves lives by supplying vital blood for medical treatments and emergencies.
+                    Availability fluctuates due to varying demands and shortages in blood banks. Encouraging regular,
+                    voluntary donations and efficient collection systems are crucial. Sustaining an adequate blood
+                    supply is essential for supporting healthcare and saving lives.</p>
+                <a href="https://www.friends2support.org/" class="btn"> learn more <span
+                        class="fas fa-chevron-right"></span> </a>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!--doctors detail-->
+    <section class="doctors" id="doctors">
+
+        <h1 class="heading"> our <span>doctors</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://media.easy-peasy.ai/6431025c-ec6b-4006-b95b-7ef27c671bbb/71abcc42-af00-4416-b793-e1a924751685.png"
+                    alt="">
+                <h3>Dr.Gitanjali Magare </h3>
+                <span>dentist</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://media.istockphoto.com/id/1187318087/photo/portrait-of-happy-young-handsome-indian-man-doctor-smiling.jpg?s=612x612&w=0&k=20&c=PPGbJKhAjkab5waxx7GCleovSMuXh4KNW0ASqUkfbaU="
+                    alt="">
+                <h3>Dr.Kamlesh Magare </h3>
+                <span>neurologist</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://img.freepik.com/premium-photo/indian-female-doctor-indian-nurse_714173-202.jpg"
+                    alt="">
+                <h3>Dr.Divya Patel</h3>
+                <span>Anaesthesiologist</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://img.freepik.com/premium-photo/indian-female-doctor-indian-nurse_714173-208.jpg"
+                    alt="">
+                <h3>Dr.Janavi mahajan</h3>
+                <span>Acupuncturist</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://media.istockphoto.com/id/179011088/photo/indian-doctor.jpg?s=612x612&w=0&k=20&c=EwRn1EWy79prCtdo8yHM6hvCVVcaKTznVBpVURPJxt4="
+                    alt="">
+                <h3>Dr. J.K. Yadav</h3>
+                <span>Allergy specialist</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://media.istockphoto.com/id/1327024466/photo/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-clinic-hall.jpg?s=612x612&w=0&k=20&c=49wqOwwuonk9f8NACL7M_5RosqQPFwJ8-dpmeo9AvQw="
+                    alt="">
+                <h3>Dr.Kalpesh Magare </h3>
+                <span>Andrologist</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/premium-photo/young-indian-male-doctor_437792-301.jpg" alt="">
+                <h3>Dr. Priyanshu Singh</h3>
+                <span>intern doctor</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://www.shutterstock.com/image-photo/handsome-male-doctor-on-color-260nw-1408434731.jpg"
+                    alt="">
+                <h3>Dr. Sandip Magare </h3>
+                <span>MD</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://t3.ftcdn.net/jpg/06/79/61/84/360_F_679618431_C0oGg93cAt8ZgCFA8Bm9evcV86JoZWB9.jpg"
+                    alt="">
+                <h3>Dr. Ravindra Verma </h3>
+                <span>Orthopedic Surgeon</span>
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php/" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="appointment" id="appointment">
+
+        <h1 class="heading"> <span>appointment</span> now </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="https://drive.google.com/uc?id=1c_CPnghHMgGCD78VFqqS64Zu-BzD1gHF" alt="">
+            </div>
+
+            <form action="https://formspree.io/f/mrgwjwje" method="post">
+                <h3>make appointment</h3>
+                <input type="text" name="name" placeholder="your name" class="box">
+                <input type="number" name="number" placeholder="your number" class="box">
+                <input type="email" name="email" placeholder="your email" class="box">
+                <input type="date" name="date" class="box">
+                <input type="submit" name="submit" value="appointment now" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!--client's review-->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> client's <span>review</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://i.pinimg.com/736x/c3/4f/0d/c34f0d721f570e980190a1a1a3863cc0.jpg" alt="">
+                <h3>Rahul Tadvi</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">The services that I receive from (medcare) is excellent. Dr. Jayesh Magare and the staff
+                    are friendly and ensure that I am properly informed about my health and care. I would have no qualms
+                    in recommending them to friendly and friends!</p>
+            </div>
+
+            <div class="box">
+                <img src="https://www.shutterstock.com/image-photo/senior-indian-man-portrait-260nw-187860329.jpg"
+                    alt="">
+                <h3>K.S bharat</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">Great experience as a first timer. I barely waited to be helped when I checked in. The
+                    staff and Dr. Pranav Chaudhari were all very friendly and helpful. I especially loved how Dr. Pranav
+                    Chaudhari really took his time to explain my conditions with me as well as my treatment options. I
+                    had a great visit and the doctor’s demeanor has really put me at ease so I highly recommend this
+                    clinic!</p>
+            </div>
+
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvCoNiMpstIZaUgI0kW9Z9ZuDMlu3bqsDKJglNUmxYFRfEyRCtwSTbvKGG1ykIjcTuNzo&usqp=CAU"
+                    alt="">
+                <h3>Lokesh Singh </h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">Dr.K.S bharat is incredible. Not only has she taken great care of my health, but also
+                    she is lovely to speak with at every appointment. It’s rare to find a doctor that combines such
+                    personal touches and care for a patient as a person with outstanding quality of medical care. I
+                    highly recommend becoming her patient!</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading"> our <span>blogs</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://www.shutterstock.com/image-photo/indian-man-260nw-333741515.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i>1st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-user"></i> Dr.Rangan Chatterjee </a>
+                    </div>
+
+                    <p>Dr.Rangan Chatterjee investigates and treats many conditions including diabetes, autoimmune
+                        disorders, digestive problems, food allergies, skin problems, migraines and irritable bowel
+                        syndrome. He works with a wide range of people, from those who have specific health conditions
+                        to those who simply wish to optimize their health and performance.</p>
+                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://www.shutterstock.com/image-photo/portrait-laughing-man-indian-origin-260nw-604765532.jpg"
+                        alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i> 21 november, 2022 </a>
+                        <a href="#"> <i class="fas fa-user"></i> Dr. K. P. V. Rao </a>
+                    </div>
+
+                    <p>I write articles in a simple way so that you all can understand a particular illness or disease
+                        in a better way, be aware of its consequences and get an idea to either prevent it or get
+                        treated in a proper way by consulting your family healthcare provider/physician.</p>
+                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://www.shutterstock.com/image-photo/portrait-indian-male-teacher-outside-260nw-2011865096.jpg"
+                        alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i> 17 march, 2022 </a>
+                        <a href="#"> <i class="fas fa-user"></i> Dr. Jay Bhatt </a>
+                    </div>
+
+                    <p>Jay Bhatt, D.O., MPH, MPA is a physician executive, internist, geriatrician, public health
+                        innovator, and widely quoted expert on healthcare transformation and improving healthcare
+                        outcomes. Dr. Jay Bhatt explains and discusses issues in public health, healthcare technology,
+                        and innovation, social determinants of care, community health, and the caregivers of the future.
+                    </p>
+                    <a href="https://www.shutterstock.com/image-photo/portrait-man-looking-away-folding-260nw-2451558735.jpg"
+                        class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://www.shutterstock.com/image-photo/portrait-man-looking-away-folding-260nw-2451558735.jpg"
+                        alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i> 4 june, 2022 </a>
+                        <a href="#"> <i class="fas fa-user"></i> TheTwinDoctors </a>
+                    </div>
+
+                    <p>Twindoctors is the creation of twin Doctors Jamil and Idries Abdur-Rahman. This is an interactive
+                        viewer centered social and medical information platform that serves to inform, enlighten,
+                        motivate, educate and entertain, all while stimulating a discussion and establishing common
+                        ground all in the name of a healthier planet..</p>
+                    <a href="https://www.feedspot.com/infiniterss.php?_src=feed_title&followfeedid=4882179&q=site:http%3A%2F%2Fthetwindoctors.com%2Ffeed%2F"
+                        class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS63Ys6SemnUx1e0Fj795_ox68X_feN4_URgtAJEVBSLQVfqRfSrXQTj2yBcBKuaGzRkwk&usqp=CAU"
+                        alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i> 27 feb, 2019 </a>
+                        <a href="#"> <i class="fas fa-user"></i> Doctor Rachel</a>
+                    </div>
+
+                    <p>Doctor Rachel is an award winning family practice doctor who has been on the forefront of using
+                        integrative medicine principles to help her patients heal from the inside out. She's a
+                        physician, author, speaker, and teacher in the US and abroad.</p>
+                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://media.istockphoto.com/id/1212173144/photo/black-and-white-portrait-of-a-man-of-indian-ethnicity.jpg?s=612x612&w=0&k=20&c=I8RLsAvH-5H4-g1lfqtnngtImgIAMvlVccVMNQF4Xco="
+                        alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"> <i class="fas fa-calendar"></i> 7 aug,2020 </a>
+                        <a href="#"> <i class="fas fa-user"></i> Doctor Mike </a>
+                    </div>
+
+                    <p>Dr. Mikhail 'Mike' Varshavski is a Board Certified Family Medicine Doctor living in NYC. His goal
+                        is to make the field of medicine relatable, understandable, and fun!</p>
+                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--Blog-->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="#about"> <i class="fas fa-chevron-right"></i> about </a>
+                <a href="#services"> <i class="fas fa-chevron-right"></i> services </a>
+                <a href="#doctors"> <i class="fas fa-chevron-right"></i> doctors </a>
+                <a href="#appointment"> <i class="fas fa-chevron-right"></i> appointment </a>
+                <a href="#review"> <i class="fas fa-chevron-right"></i> review </a>
+                <a href="#blogs"> <i class="fas fa-chevron-right"></i> blogs </a>
+            </div>
+
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+            </div>
+
+            <div class="box">
+                <h3>appointment info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +9920xxx780 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +7620043970 </a>
+                <a href="https://mail.google.com/mail/u/0/#inboxc"> <i class="fas fa-envelope"></i>
+                    amangkashyap@gmail.com </a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"> <i class="fas fa-envelope"></i> amankashyap@gmail.com
+                </a>
+                <a
+                    href="https://www.google.co.in/maps/place/Jalgaon,+Maharashtra/@20.9900808,75.5404037,13z/data=!4m5!3m4!1s0x3bd90fa4a1eab90f:0x37f67bd21bff0a3c!8m2!3d21.0076578!4d75.5626039!5m1!1e4">
+                    <i class="fas fa-map-marker-alt"></i> Sonbhadra UP, India </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="https://x.com/i/flow/login"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="https://www.instagram.com"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i> linkedin </a>
+
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span> Aman Kashyap </span> | all rights reserved </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "h0inkSS_EEE-rT4Ekvwjv",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="h0inkSS_EEE-rT4Ekvwjv" domain="www.chatbase.co" defer>
+    </script>
+
+</body>
+
+</html>
